@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+    <odoo>
+        <data>
+        <!--
+        <record model="ir.ui.view" id="view_oeha_oeha_sample_type_tree">
+            <field name="name">SAMPLE LIST</field>
+            <field name="model">oeha.sample.type</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string='Sample Type'>
+                    <field name="name"/>
+                    <field name="related_test_type"/>
+                </tree>
+            </field>
+        </record>
+        -->
+        <record model="ir.ui.view" id="view_patient_form">
+            <field name="name">Patient Form</field>
+            <field name="model">patient.health</field>
+            <!-- <field name="type">form</field> -->
+            <field name="arch" type="xml">
+                <form string="Sample Type">
+                    <sheet>
+                        <field name="first_name" />
+                        <field name="last_name" />
+                        <field name="age" />
+                        <field name="date_birth" />
+                        <field name="gender" />
+                        <field name="address" />
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!--
+        <record id="view_oeha_sample_type_action" model="ir.actions.act_window">
+            <field name="name">Sample type</field>
+            <field name="res_model">oeha.sample.type</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="view_id" eval="False"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                Click to add a new record.
+                </p>
+            </field>
+        </record>
+        -->
+        <!--
+        <menuitem action="view_oeha_sample_type_action" name="Sample Type"
+            id="view_oeha_sample_type_menu" parent="oehealth.oeh_medical_conf_laboratory"
+            sequence="20"
+        />
+        -->
+        </data>
+    </odoo>
