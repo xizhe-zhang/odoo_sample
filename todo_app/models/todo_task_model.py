@@ -11,13 +11,11 @@ class TodoTask(models.Model):
     team_ids = fields.Many2many('res.partner', string='Team')
     date_deadline = fields.Date(string='Deadline')
 
-    @api.multi
     def do_clear_done(self):
         for task in self:
             task.active = False
         return True
 
-    @api.multi
     def write(self, values):
         if 'active' not in values:
             values['active'] = True
